@@ -23,10 +23,10 @@ export class CreateReactorDeclarationComponent implements OnInit {
       subestacion: ['', Validators.required],
       nivelTension: ['', Validators.required],
       nombrePuntoConexion: ['', Validators.required],
-      capacidadNominal: ['', Validators.required],
-      tensionNominal: ['', Validators.required],
+      capNom: ['', Validators.required],
+      tenNom: ['', Validators.required],
       conexion: ['', Validators.required],
-      modoConexion: ['', Validators.required]
+      modCon: ['', Validators.required]
     });
   }
 
