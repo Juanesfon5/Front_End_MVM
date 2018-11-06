@@ -13,9 +13,16 @@ export class ViewReactorDeclarationsComponent implements OnInit {
   constructor(private apiService: ApiService) { }
 
   ngOnInit() {
-    this.apiService.getAllReactorDeclarations().subscribe(
-      data => this.declarations = data
-    );
+    let ss = JSON.parse(localStorage.getItem('user'));
+    if (ss.type == "regulator"){
+      this.apiService.getAllReactorDeclarations().subscribe(
+        data => this.declarations = data
+      );
+    } else if (ss.type == "agent"){
+      this.apiService.getIDReactor().subscribe(
+        data => this.declarations = data
+      );
+    }
   }
 
 }

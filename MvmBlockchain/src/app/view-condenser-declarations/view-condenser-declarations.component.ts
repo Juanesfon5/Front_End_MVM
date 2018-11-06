@@ -12,9 +12,15 @@ export class ViewCondenserDeclarationsComponent implements OnInit {
   constructor(private apiService: ApiService) { }
 
   ngOnInit() {
-    this.apiService.getAllCondenserDeclarations().subscribe(
-      data => this.declarations = data
-    );
+    let ss = JSON.parse(localStorage.getItem('user'));
+    if (ss.type == "regulator"){
+      this.apiService.getAllCondenserDeclarations().subscribe(
+        data => this.declarations = data
+      );
+    } else if (ss.type == "agent"){
+      this.apiService.getIDCondenser().subscribe(
+        data => this.declarations = data
+      );
+    }
   }
-
 }

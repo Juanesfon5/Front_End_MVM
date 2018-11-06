@@ -1,4 +1,5 @@
 <app-sidenav-agente></app-sidenav-agente>
+<app-logout></app-logout>
 <form class="form-signin" [formGroup]="messageForm">
 		<!DOCTYPE html>
 <html lang="en">
@@ -23,8 +24,8 @@
                 ID:
         </label>
         <input type="text" formControlName="idDeclaracionReactor" class="form-control">
-        <div *ngIf="submitted && messageForm.controls.idDeclaracionGen.errors">
-          <div *ngIf="messageForm.controls.idDeclaracionGen.errors.required">Es obligatorio especificar el ID de la
+        <div *ngIf="submitted && messageForm.controls.idDeclaracionReactor.errors">
+          <div *ngIf="messageForm.controls.idDeclaracionReactor.errors.required">Es obligatorio especificar el ID de la
                     declaración del condensador</div>
         </div>
       </div>
@@ -77,8 +78,8 @@
               Capacidad Nominal:
           </label>
               <input type="number" formControlName="capNom" class="form-control">
-              <div *ngIf="submitted && messageForm.controls.capacidadNominal.errors">
-                <div *ngIf="messageForm.controls.capacidadNominal.errors.required">Es obligatorio especificar la capacidad
+              <div *ngIf="submitted && messageForm.controls.capNom.errors">
+                <div *ngIf="messageForm.controls.capNom.errors.required">Es obligatorio especificar la capacidad
                   nominal del condensador</div>
               </div>
       </div>
@@ -87,8 +88,8 @@
              Tension Nominal:
           </label>
               <input type="number" formControlName="tenNom" class="form-control">
-              <div *ngIf="submitted && messageForm.controls.tensionNominal.errors">
-                <div *ngIf="messageForm.controls.tensionNominal.errors.required">Es obligatorio especificar la tensión nominal
+              <div *ngIf="submitted && messageForm.controls.tenNom.errors">
+                <div *ngIf="messageForm.controls.tenNom.errors.required">Es obligatorio especificar la tensión nominal
                   del condensador</div>
               </div>
       </div>
@@ -109,8 +110,8 @@
             Modo Conexion:
         </label>
             <input type="text" formControlName="modCon" class="form-control">
-            <div *ngIf="submitted && messageForm.controls.modoConexion.errors">
-              <div *ngIf="messageForm.controls.modoConexion.errors.required">Es obligatorio especificar el modo de conexión del
+            <div *ngIf="submitted && messageForm.controls.modCon.errors">
+              <div *ngIf="messageForm.controls.modCon.errors.required">Es obligatorio especificar el modo de conexión del
                 condensador</div>
             </div>
       </div>

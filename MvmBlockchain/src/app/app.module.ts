@@ -30,6 +30,7 @@ import { CreateTransDeclarationComponent } from './create-trans-declaration/crea
 import { CreateGenDeclarationComponent } from './create-gen-declaration/create-gen-declaration.component';
 import { SidenavXMComponent } from './sidenav-xm/sidenav-xm.component';
 import { SidenavAgenteComponent } from './sidenav-agente/sidenav-agente.component';
+import { LogoutComponent } from './logout/logout.component';
 
 /**import { CreateRegulatorComponent } from './create-regulator/create-regulator.component';
 import { ViewRegulatorsComponent } from './view-regulators/view-regulators.component';
@@ -65,7 +66,8 @@ import { CreateAgentComponent } from './create-agent/create-agent.component';*/
     CreateTransDeclarationComponent,
     CreateGenDeclarationComponent,
     SidenavXMComponent,
-    SidenavAgenteComponent
+    SidenavAgenteComponent,
+    LogoutComponent
   ],
   imports: [
     CommonModule, 

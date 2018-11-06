@@ -57,6 +57,14 @@ export class ApiService {
     return this.wrapGet('condenser');
   }
 
+  public getIDCondenser(){
+    return this.wrapGet('condensadorPorAgente');
+  }
+
+  public getIDReactor(){
+    return this.wrapGet('reactorPorAgente');
+  }
+
   public getAllLineDeclarations() {
     return this.wrapGet('linea');
   }
@@ -103,7 +111,7 @@ export class ApiService {
     headers = headers.append('Authorization', localStorage.getItem('token'));
     this.httpClient.post(`${this.endpoint}/${route}`, object, { headers })
       .subscribe(
-        res => this.router.navigate(['']),
+        res => this.router.navigate(['Agente']),
         err => console.log(`Couldn't post to ${route}`)
       );
   }
