@@ -1,0 +1,50 @@
+<div id="mySidenav" class="sidenav">
+    <a href="javascript:void(0)" class="closebtn" (click)="closeNav()">&times;</a>
+    <a href="Admin">Home</a>
+    <a href="Create">Crear Agente</a>
+    <a href="ViewAg">Ver Agentes</a>
+    <a href="CreateXM">Crear usuario de XM</a>
+    <a href="ViewXM">Ver usuarios de XM</a>
+  </div>
+  
+  <!-- Use any element to open the sidenav -->
+<span (click)="openNav()" style="position: relative; bottom: 23px; left: 32px">
+  <img src="../../assets/menu-icon-18.png" width="40" >
+</span>
+
+<form [formGroup]="messageForm" class="form-signin">
+  <h1>Crear Entidad Reguladora</h1>
+  
+  <div class="form-group"> <!-- Full Name -->
+		<label for="full_name_id" class="control-label">Nombre</label>
+		<input type="text" formControlName="nombre" class="form-control">
+	</div>
+  
+  <div class="form-group"> <!-- Full Name -->
+		<label for="full_name_id" class="control-label">Usuario</label>
+		<input type="text" formControlName="username" class="form-control">
+    <div *ngIf="submitted && messageForm.controls.username.errors">
+        <div *ngIf="messageForm.controls.username.errors.required">Usuario Requerido</div>
+    </div>
+  </div>
+
+  <div class="form-group"> <!-- Full Name -->
+		<label for="full_name_id" class="control-label">Contraseña</label>
+		<input type="password" formControlName="password" class="form-control">
+    <div *ngIf="submitted && messageForm.controls.password.errors">
+        <div *ngIf="messageForm.controls.password.errors.required">Clave Requerida</div>
+      </div>
+  </div>
+  
+  <label>
+    Nombre:
+    <input type="text" formControlName="nombre">
+    <div *ngIf="submitted && messageForm.controls.nombre.errors">
+      <div *ngIf="messageForm.controls.nombre.errors.required">Es obligatorio especificar el nombre de
+        la entidad reguladora</div>
+    </div>
+  </label>
+
+  <button class="btn btn-primary btn-block" (click)="thisSubmit()" >Submit</button>
+
+</form>

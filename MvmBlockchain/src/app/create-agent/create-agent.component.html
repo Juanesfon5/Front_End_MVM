@@ -1,0 +1,86 @@
+<div id="mySidenav" class="sidenav">
+    <a href="javascript:void(0)" class="closebtn" (click)="closeNav()">&times;</a>
+    <a href="Create"> Crear Agente</a>
+    <a href="ViewAg">Ver Agentes</a>
+    <a href="#">Clients</a>
+    <a href="#">Contact</a>
+  </div>
+  
+  <!-- Use any element to open the sidenav -->
+  <span (click)="openNav()" style="position: relative; bottom: 23px; left: 32px">
+    <img src="../../assets/menu-icon-18.png" width="40" >
+  </span>
+
+<form class="form-signin" [formGroup]="messageForm">
+		<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css" rel="stylesheet"/>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+	<h3>Crear Agente MEM</h3>
+    <div class="row">
+        <div class="col-xs-6 form-group">
+            <label>Nombre</label>
+            <input formControlName="nombreEmpleado" class="form-control" type="text"/>
+        </div>
+        <div class="col-xs-6 form-group">
+            <label>Email</label>
+            <input formControlName="emailEmpresa" class="form-control" type="text"/>
+		</div>
+    </div>
+	<div class="row">
+		<div class="col-xs-6 form-group">
+			<label>Usuario</label>
+			<input formControlName="username" class="form-control" type="text" />
+      <div *ngIf="submitted && messageForm.controls.username.errors">
+        <div *ngIf="messageForm.controls.username.errors.required">Usuario Requerido</div>
+        </div>   
+    </div>
+        <div class="col-xs-6 form-group">
+            <label>Contraseña</label>
+            <input formControlName="password" class="form-control" type="password"/>
+        </div>
+	</div>
+	<div class="row">
+			<div class="col-xs-6 form-group">
+				<label >Teléfono</label>
+				<input formControlName="telefonoEmpresa" class="form-control" type="text"/>
+			</div>
+			<div class="col-xs-6 form-group">
+				<label>Fax</label>
+				<input formControlName="faxEmpresa" class="form-control" type="text"/>
+			</div>
+  </div>
+  <div class="row">
+    <div class="col-xs-6 form-group">
+      <label>Empresa</label>
+      <input formControlName="nombreEmpresa" class="form-control" type="text"/>
+    </div>
+    <div class="col-xs-6 form-group">
+      <label>Dirección</label>
+      <input formControlName="direccionEmpresa" class="form-control" type="text"/>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-xs-12 form-group">
+      <label>Cargo</label>
+      <input formControlName="cargoEmpleado" class="form-control" type="text"/>
+    </div>
+  </div>
+  <button class="btn btn-primary btn-block" (click)="thisSubmit()" >Submit</button>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+  </body>
+</html>
+</form>	

@@ -29,6 +29,7 @@ export class ApiService {
   }
 
   public createNewAgent(agent: Object) {
+    console.log("Creando agente")
     this.createNewUser({ form: agent, type: 'agent', idName: 'idAgenteMEM', route: 'agent' });
   }
 

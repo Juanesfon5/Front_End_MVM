@@ -1,0 +1,31 @@
+<div id="mySidenav" class="sidenav">
+    <a href="javascript:void(0)" class="closebtn" (click)="closeNav()">&times;</a>
+    <a href="Admin">Home</a>
+    <a href="Create">Crear Agente</a>
+    <a href="ViewAg">Ver Agentes</a>
+    <a href="CreateXM">Crear usuario de XM</a>
+    <a href="ViewXM">Ver usuarios de XM</a>
+  </div>
+  
+  <!-- Use any element to open the sidenav -->
+  <span (click)="openNav()" style="position: relative; bottom: 39px; left: 1px">
+    <img src="../../assets/menu-icon-18.png" width="40" >
+  </span>
+
+<div class=container>
+  <h1>Agentes MEM</h1>
+  <ul>
+    <li *ngFor="let agent of agents">
+      <ul>
+        <li>ID: {{ agent.idAgenteMEM }}</li>
+        <li>Empresa: {{ agent.nombreEmpresa }}</li>
+        <li>Dirección: {{ agent.direccionEmpresa }}</li>
+        <li>Telefono: {{ agent.telefonoEmpresa }}</li>
+        <li>Fax: {{ agent.faxEmpresa }}</li>
+        <li>Email: {{ agent.emailEmpresa }}</li>
+        <li>Nombre: {{ agent.nombreEmpleado }}</li>
+        <li>Cargo: {{ agent.cargoEmpleado }}</li>
+      </ul>
+    </li>
+  </ul>
+</div>

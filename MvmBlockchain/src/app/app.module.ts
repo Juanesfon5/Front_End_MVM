@@ -9,6 +9,15 @@ import { AgenteLogComponent } from './agente-log/agente-log.component';
 import { AdminLogComponent } from './admin-log/admin-log.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ReactiveFormsModule } from '@angular/forms';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { CommonModule } from '@angular/common';
+import { MatButtonModule, MatNativeDateModule, MatIconModule, MatSidenavModule, MatListModule, MatToolbarModule } from '@angular/material';
+import { CreateAgentComponent } from './create-agent/create-agent.component';
+import { ViewAgentsComponent } from './view-agents/view-agents.component';
+import { CreateRegulatorComponent } from './create-regulator/create-regulator.component';
+import { MySidenavComponent } from './my-sidenav/my-sidenav.component';
+import { ViewRegulatorComponent } from './view-regulator/view-regulator.component';
+
 /**import { CreateRegulatorComponent } from './create-regulator/create-regulator.component';
 import { ViewRegulatorsComponent } from './view-regulators/view-regulators.component';
 import { CreateCondenserDeclarationComponent } from './create-condenser-declaration/create-condenser-declaration.component';
@@ -17,19 +26,36 @@ import { ViewAgentsComponent } from './view-agents/view-agents.component';
 import { CreateAgentComponent } from './create-agent/create-agent.component';*/
 
 @NgModule({
+  exports: [
+    MatSidenavModule
+  ],
   declarations: [
     AppComponent,
     LoginComponent,
     XMLogedComponent,
     AgenteLogComponent,
-    AdminLogComponent
+    AdminLogComponent,
+    CreateAgentComponent,
+    ViewAgentsComponent,
+    CreateRegulatorComponent,
+    MySidenavComponent,
+    ViewRegulatorComponent
   ],
   imports: [
+    CommonModule, 
+    MatButtonModule,
+    MatToolbarModule, 
+    MatNativeDateModule, 
+    MatIconModule, 
+    MatSidenavModule, 
+    MatListModule,
+    MatSidenavModule,
     FormsModule,
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
