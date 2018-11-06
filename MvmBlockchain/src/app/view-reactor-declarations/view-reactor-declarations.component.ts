@@ -15,10 +15,12 @@ export class ViewReactorDeclarationsComponent implements OnInit {
   ngOnInit() {
     let ss = JSON.parse(localStorage.getItem('user'));
     if (ss.type == "regulator"){
+      console.log("busca como XM")
       this.apiService.getAllReactorDeclarations().subscribe(
         data => this.declarations = data
       );
     } else if (ss.type == "agent"){
+      console.log("Busca como agente")
       this.apiService.getIDReactor().subscribe(
         data => this.declarations = data
       );

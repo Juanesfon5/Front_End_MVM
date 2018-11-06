@@ -132,7 +132,7 @@ export class ApiService {
           settings['form'][settings['idName']] = res['id'];
           this.httpClient.post(`${this.endpoint}/${settings["route"]}`, settings['form'], { headers }).
             subscribe(
-              res => this.router.navigate(['']),
+              res => this.router.navigate(['Admin']),
               err => console.log(`Couldn't register the new ${settings["type"]} to the blockchain: ${JSON.stringify(err)}`)
             );
         },
