@@ -37,7 +37,6 @@ import { CreateAgentComponent } from './create-agent/create-agent.component';*/
     CreateAgentComponent,
     ViewAgentsComponent,
     CreateRegulatorComponent,
-    MySidenavComponent,
     ViewRegulatorComponent
   ],
   imports: [
