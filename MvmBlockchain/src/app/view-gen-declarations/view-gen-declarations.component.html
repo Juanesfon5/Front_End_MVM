@@ -1,0 +1,24 @@
+<app-sidenav-xm></app-sidenav-xm>
+<div class="container">
+    <h1>Declaraciones de Unidades de Generacion</h1>
+    <ul>
+      <li *ngFor="let declaration of declarations">
+        <ul>
+          <li>ID: {{ declaration.idDeclaracionUnidadesdeGeneracion }}</li>
+          <li>Nombre planta: {{ declaration.declaracionUnidadesDeGeneracion.unidadDeGeneracion.nombrePlanta }}</li>
+          <li>Nombre Unidad: {{ declaration.declaracionUnidadesDeGeneracion.unidadDeGeneracion.nombreUnidad }}</li>
+          <li>Subestacion Barra: {{ declaration.declaracionUnidadesDeGeneracion.unidadDeGeneracion.barra.subestacion }}</li>
+          <li>Nivel Tension: {{ declaration.declaracionUnidadesDeGeneracion.unidadDeGeneracion.barra.nivelTension }}</li>
+          <li>Nombre Punto de Conexion: {{ declaration.declaracionUnidadesDeGeneracion.unidadDeGeneracion.barra.nombrePuntoConexion }}</li>
+          <li>Tipo de Turbina: {{ declaration.declaracionUnidadesDeGeneracion.tipoDeTurbina }}</li>
+          <li>Tipo de ciclo: {{ declaration.declaracionUnidadesDeGeneracion.tipoDeCiclo }}</li>
+          <li>Capacidad Nominal MW: {{ declaration.declaracionUnidadesDeGeneracion.capacidadNominalMW }}</li>
+          <li>Capacidad Nominal MWA: {{ declaration.declaracionUnidadesDeGeneracion.capacidadNominalMWA }}</li>
+          <li>Capacidad Efectiva Neta: {{ declaration.declaracionUnidadesDeGeneracion.capacidadEfectivaNeta }}</li>
+          <li>Mínimo Técnico: {{ declaration.declaracionUnidadesDeGeneracion.minimoTecnico }}</li>
+          <li>Factor de Potencia Nominal: {{ declaration.declaracionUnidadesDeGeneracion.factorDePotenciaNominal }}</li>
+          <li>Capacidad de Absorcion de Reactivos: {{ declaration.declaracionUnidadesDeGeneracion.capacidadAbsorcionDeReactivos }}</li>
+        </ul>
+      </li>
+    </ul>
+  </div>

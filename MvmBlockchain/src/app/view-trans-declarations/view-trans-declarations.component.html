@@ -1,0 +1,41 @@
+<app-sidenav-xm></app-sidenav-xm>
+<div class="container">
+  <h1>Declaraciones de SVC</h1>
+  <ul>
+    <li *ngFor="let declaration of declarations">
+      <ul>
+        <li>ID: {{ declaration.idDeclaracionTransformador }}</li>
+        <li>Nombre: {{ declaration.declaracionTransformador.transformador.nombre }}</li>
+        <li>Subestacion: {{ declaration.declaracionTransformador.transformador.barraAltaTension.subestacion }}</li>
+        <li>Nivel Tension: {{ declaration.declaracionTransformador.transformador.barraAltaTension.nivelTension }}</li>
+        <li>Nombre Punto de Conexion: {{ declaration.declaracionTransformador.transformador.barraAltaTension.nombrePuntoConexion }}</li>
+        <li>Subestacion: {{ declaration.declaracionTransformador.transformador.barraMediaTension.subestacion }}</li>
+        <li>Nivel Tension: {{ declaration.declaracionTransformador.transformador.barraMediaTension.nivelTension }}</li>
+        <li>Nombre Punto de Conexion: {{ declaration.declaracionTransformador.transformador.barraMediaTension.nombrePuntoConexion }}</li>
+        <li>Subestacion: {{ declaration.declaracionTransformador.transformador.barraBajaTension.subestacion }}</li>
+        <li>Nivel Tension: {{ declaration.declaracionTransformador.transformador.barraBajaTension.nivelTension }}</li>
+        <li>Nombre Punto de Conexion: {{ declaration.declaracionTransformador.transformador.barraBajaTension.nombrePuntoConexion }}</li>
+        <li>Impedancia Alta/Baja Nominal: {{ declaration.declaracionTransformador.impedanciaAltaBajaNominal }}</li>
+        <li>Impedancia Alta/Media Nominal: {{ declaration.declaracionTransformador.impedanciaAltaMediaNominal }}</li>
+        <li>Impedancia Media/Baja Nominal: {{ declaration.declaracionTransformador.impedanciaMediaBajaNominal }}</li>
+        <li>Grupo de Conexion: {{ declaration.declaracionTransformador.grupoDeConexion }}</li>
+        <li>Tension Nominal: {{ declaration.declaracionTransformador.devanadoAltaTension.tensionNominal }}</li>
+        <li>Capacidad Nominal: {{ declaration.declaracionTransformador.devanadoAltaTension.capacidadNominal }}</li>
+        <li>Capacidad Emergencia: {{ declaration.declaracionTransformador.devanadoAltaTension.capacidadEmergencia }}</li>
+        <li>Resistencia: {{ declaration.declaracionTransformador.devanadoAltaTension.resistencia }}</li>
+        <li>Resistencia Tierra: {{ declaration.declaracionTransformador.devanadoAltaTension.resistenciaTierra }}</li>
+        <li>Reactancia: {{ declaration.declaracionTransformador.devanadoAltaTension.reactancia }}</li>
+        <li>Reactancia Tierra: {{ declaration.declaracionTransformador.devanadoAltaTension.reactanciaTierra }}</li>
+        <li>ladoTap: {{ declaration.declaracionTransformador.ladoTap }}</li>
+        <li>Paso Maximo: {{ declaration.declaracionTransformador.pasoMaximo }}</li>
+        <li>Paso Minimo: {{ declaration.declaracionTransformador.pasoMinimo }}</li>
+        <li>Paso Nominal: {{ declaration.declaracionTransformador.pasoNominal }}</li>
+        <li>Tension Tap Nominal: {{ declaration.declaracionTransformador.tensionTapNominal }}</li>
+        <li>Paso Tap: {{ declaration.declaracionTransformador.pasoTap }}</li>
+        <li>Zcc Maximo: {{ declaration.declaracionTransformador.zccMax }}</li>
+        <li>Zcc Minimo: {{ declaration.declaracionTransformador.zccMin }}</li>
+        <li>Agente: {{ declaration.declaracionTransformador.agente }}</li>
+      </ul>
+    </li>
+  </ul>
+</div>

@@ -14,15 +14,24 @@ export class ApiService {
     private router: Router) { }
 
   public authenticate(user: Object) {
+    console.log("Autenticando...")
     return this.httpClient.post(`${this.endpoint}/authenticate`, user).subscribe(data => {
       if (data['success']) {
         this.storeUserData(data['user'], data['token']);
-        this.router.navigate(['']);
+        if (data['user.type'] == 'admin'){
+          this.router.navigate(['Admin']);
+        } else if (data['user.type'] == 'regulator'){
+          this.router.navigate(['XMUSER']);
+        } else if (data['user.type'] == 'agent'){
+          this.router.navigate(['Agente']);
+        }
       } else {
-        this.router.navigate(['login']);
+        this.router.navigate(['']);
       }
     });
   }
+
+
 
   public getAllAgents() {
     return this.wrapGet('agent');
@@ -45,8 +54,32 @@ export class ApiService {
     return this.wrapGet('condenser');
   }
 
+  public getAllLineDeclarations() {
+    return this.wrapGet('linea');
+  }
+
+  public getAllReactorDeclarations() {
+    return this.wrapGet('reactor');
+  }
+
+  public getAllSvcDeclarations() {
+    return this.wrapGet('svc');
+  }
+
+  public getAllTransDeclarations() {
+    return this.wrapGet('transformador');
+  }
+
+  public getAllGenDeclarations() {
+    return this.wrapGet('unidadesGeneracion');
+  }
+
   public createNewCondenserDeclaration(declaration: Object) {
     this.wrapPost('condenser', declaration);
+  }
+
+  public createNewReactorDeclaration(declaration: Object){
+    this.wrapPost('reactor', declaration);
   }
 
   public storeUserData(user: Object, token: string) {

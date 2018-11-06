@@ -1,0 +1,32 @@
+<app-sidenav-xm></app-sidenav-xm>
+<div class="container">
+  <h1>Declaraciones de Líneas de Transmisión</h1>
+  <ul>
+    <li *ngFor="let declaration of declarations">
+      <ul>
+        <li>ID: {{ declaration.idDeclaracionLinea }}</li>
+        <li>Nombre de la línea: {{ declaration.declaracionLinea.linea.nombre }}</li>
+        <li>Subestación barra inicial: {{ declaration.declaracionLinea.linea.barraInicial.subestacion }}</li>
+        <li>Nivel de tensión barra inicial: {{ declaration.declaracionLinea.linea.barraInicial.nivelTension }}</li>
+        <li>Nombre punto de conexión barra inicial: {{ declaration.declaracionLinea.linea.barraInicial.nombrePuntoConexion }}</li>
+        <li>Subestación barra final: {{ declaration.declaracionLinea.linea.barraFinal.subestacion}}</li>
+        <li>Nivel Tensión barra final: {{ declaration.declaracionLinea.linea.barraFinal.nivelTension }}</li>
+        <li>Nombre punto de conexión barra final: {{ declaration.declaracionLinea.linea.barraFinal.nombrePuntoConexion }}</li>
+        <li>Tension Nominal: {{ declaration.declaracionLinea.tensionNominal }}</li>
+        <li>Longitud: {{ declaration.declaracionLinea.longitud }}</li>
+        <li>Capacidad Nominal: {{ declaration.declaracionLinea.capacidadNominal }}</li>
+        <li>Elemento Limite: {{ declaration.declaracionLinea.elementoLimite }}</li>
+        <li>Limite Emergencia: {{ declaration.declaracionLinea.limiteEmergencia }}</li>
+        <li>Resistencia Secuencia Positiva: {{ declaration.declaracionLinea.secuenciaPositiva.resistencia }}</li>
+        <li>Reactancia Secuencia Positiva: {{ declaration.declaracionLinea.secuenciaPositiva.reactancia }}</li>
+        <li>Susceptancia Secuencia Positiva: {{ declaration.declaracionLinea.secuenciaPositiva.susceptancia }}</li>
+        <li>Resistencia Secuencia Cero: {{ declaration.declaracionLinea.secuenciaCero.resistencia }}</li>
+        <li>Reactancia Secuencia Cero: {{ declaration.declaracionLinea.secuenciaCero.reactancia }}</li>
+        <li>Susceptancia Secuencia Cero: {{ declaration.declaracionLinea.secuenciaCero.susceptancia }}</li>
+        <li>Comparte: {{ declaration.declaracionLinea.comparte }}</li>
+        <li>Líneas que Comparte: {{ declaration.declaracionLinea.lineasComparte }}</li>
+        <li>Agente: {{ declaration.declaracionLinea.agente }}</li>
+      </ul>
+    </li>
+  </ul>
+</div>

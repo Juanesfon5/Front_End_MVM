@@ -15,7 +15,21 @@ import { MatButtonModule, MatNativeDateModule, MatIconModule, MatSidenavModule, 
 import { CreateAgentComponent } from './create-agent/create-agent.component';
 import { ViewAgentsComponent } from './view-agents/view-agents.component';
 import { CreateRegulatorComponent } from './create-regulator/create-regulator.component';
-import { ViewRegulatorComponent } from './view-regulator/view-regulator.component';
+import { ViewRegulatorsComponent } from './view-regulators/view-regulators.component';
+import { ViewCondenserDeclarationsComponent } from './view-condenser-declarations/view-condenser-declarations.component';
+import { ViewLineDeclarationsComponent } from './view-line-declarations/view-line-declarations.component';
+import { ViewReactorDeclarationsComponent } from './view-reactor-declarations/view-reactor-declarations.component';
+import { ViewSvcDeclarationsComponent } from './view-svc-declarations/view-svc-declarations.component';
+import { ViewTransDeclarationsComponent } from './view-trans-declarations/view-trans-declarations.component';
+import { ViewGenDeclarationsComponent } from './view-gen-declarations/view-gen-declarations.component';
+import { CreateCondenserDeclarationComponent } from './create-condenser-declaration/create-condenser-declaration.component';
+import { CreateLineDeclarationComponent } from './create-line-declaration/create-line-declaration.component';
+import { CreateReactorDeclarationComponent } from './create-reactor-declaration/create-reactor-declaration.component';
+import { CreateSvcDeclarationComponent } from './create-svc-declaration/create-svc-declaration.component';
+import { CreateTransDeclarationComponent } from './create-trans-declaration/create-trans-declaration.component';
+import { CreateGenDeclarationComponent } from './create-gen-declaration/create-gen-declaration.component';
+import { SidenavXMComponent } from './sidenav-xm/sidenav-xm.component';
+import { SidenavAgenteComponent } from './sidenav-agente/sidenav-agente.component';
 
 /**import { CreateRegulatorComponent } from './create-regulator/create-regulator.component';
 import { ViewRegulatorsComponent } from './view-regulators/view-regulators.component';
@@ -37,7 +51,21 @@ import { CreateAgentComponent } from './create-agent/create-agent.component';*/
     CreateAgentComponent,
     ViewAgentsComponent,
     CreateRegulatorComponent,
-    ViewRegulatorComponent
+    ViewRegulatorsComponent,
+    ViewCondenserDeclarationsComponent,
+    ViewLineDeclarationsComponent,
+    ViewReactorDeclarationsComponent,
+    ViewSvcDeclarationsComponent,
+    ViewTransDeclarationsComponent,
+    ViewGenDeclarationsComponent,
+    CreateCondenserDeclarationComponent,
+    CreateLineDeclarationComponent,
+    CreateReactorDeclarationComponent,
+    CreateSvcDeclarationComponent,
+    CreateTransDeclarationComponent,
+    CreateGenDeclarationComponent,
+    SidenavXMComponent,
+    SidenavAgenteComponent
   ],
   imports: [
     CommonModule, 

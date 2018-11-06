@@ -26,7 +26,8 @@ export class LoginComponent implements OnInit {
     });
   }
   
-  logClick(form){
+  logClick(){
+    console.log("Entra");
     this.submitted = true;
     if (this.messageForm.invalid) {
       return;
@@ -39,21 +40,5 @@ export class LoginComponent implements OnInit {
     }
     this.apiService.authenticate(user);
     this.success = true;
-    /** 
-    this.username = form.value.User;
-    console.log(this.username);
-    alert("The form was submitted");
-    switch (this.username) {
-      case "Agente":
-        this.reg = "Agente";
-        break;
-      case "Admin":
-        this.reg = "Admin";
-        break;
-
-      case "XM":
-        this.reg = "XMUSER";
-        break;
-    }*/
   }
 }

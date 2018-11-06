@@ -1,0 +1,155 @@
+<app-sidenav-agente></app-sidenav-agente>
+<form class="form-signin" [formGroup]="messageForm">
+		<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css" rel="stylesheet"/>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+	<h3>Declarar Unidad De Generadores</h3>
+    <div class="row">
+      <div class="col-xs-6 form-group">
+        <label>
+                ID:
+        </label>
+        <input type="text" formControlName="idDeclaracionGen" class="form-control">
+        <div *ngIf="submitted && messageForm.controls.idDeclaracionGen.errors">
+          <div *ngIf="messageForm.controls.idDeclaracionGen.errors.required">Es obligatorio especificar el ID de la
+                    declaración del condensador</div>
+        </div>
+      </div>
+      <div class="col-xs-6 form-group">
+          <label>
+              Nombre Planta:
+          </label>
+              <input type="text" formControlName="nombre" class="form-control">
+              <div *ngIf="submitted && messageForm.controls.nombre.errors">
+                <div *ngIf="messageForm.controls.nombre.errors.required">Es obligatorio especificar nombre del banco de
+                  condensadores</div>
+              </div>
+      </div>
+    </div>
+	<div class="row">
+        <div class="col-xs-6 form-group">
+            <label>
+                Subestación barra:
+            </label>
+                <input type="text" formControlName="subestacion" class="form-control">
+                <div *ngIf="submitted && messageForm.controls.subestacion.errors">
+                  <div *ngIf="messageForm.controls.subestacion.errors.required">Es obligatorio especificar la subestacion de la
+                    barra</div>
+                </div>
+        </div>
+        <div class="col-xs-6 form-group">
+            <label>
+                Nivel de Tension:
+            </label>
+                <input type="number" formControlName="nivelTension" class="form-control">
+                <div *ngIf="submitted && messageForm.controls.nivelTension.errors">
+                  <div *ngIf="messageForm.controls.nivelTension.errors.required">Es obligatorio especificar el nivel de tensión de
+                    la barra</div>
+                </div>
+        </div>
+        <div class="col-xs-6 form-group">
+            <label>
+                Nombre punto de conexión de la barra:
+            </label>
+                <input type="text" formControlName="nombrePuntoConexion" class="form-control">
+                <div *ngIf="submitted && messageForm.controls.nombrePuntoConexion.errors">
+                  <div *ngIf="messageForm.controls.nombrePuntoConexion.errors.required">Es obligatorio especificar nombre del punto
+                    de conexión de la barra</div>
+                </div>
+        </div>
+	</div>
+	<div class="row">
+			<div class="col-xs-6 form-group">
+          <label>
+              Tipo de Turbina:
+          </label>
+              <input type="number" formControlName="tipoTurbina" class="form-control">
+              <div *ngIf="submitted && messageForm.controls.capacidadNominal.errors">
+                <div *ngIf="messageForm.controls.capacidadNominal.errors.required">Es obligatorio especificar la capacidad
+                  nominal del condensador</div>
+              </div>
+      </div>
+      <div class="col-xs-6 form-group">
+          <label>
+              Tipo de Ciclo:
+          </label>
+              <input type="number" formControlName="tipoCiclo" class="form-control">
+              <div *ngIf="submitted && messageForm.controls.tensionNominal.errors">
+                <div *ngIf="messageForm.controls.tensionNominal.errors.required">Es obligatorio especificar la tensión nominal
+                  del condensador</div>
+              </div>
+      </div>
+      <div class="col-xs-6 form-group">
+          <label>
+              Capacidad Nominal MW:
+          </label>
+              <input type="text" formControlName="capNominal" class="form-control">
+              <div *ngIf="submitted && messageForm.controls.conexion.errors">
+                <div *ngIf="messageForm.controls.conexion.errors.required">Es obligatorio especificar el tipo de conexión del
+                  banco</div>
+              </div>
+      </div>
+  </div>
+  <div class="row">
+    <div class="col-xs-6 form-group">
+        <label>
+            Capacidad Nominal MWA:
+        </label>
+            <input type="text" formControlName="capNominalM" class="form-control">
+            <div *ngIf="submitted && messageForm.controls.modoConexion.errors">
+              <div *ngIf="messageForm.controls.modoConexion.errors.required">Es obligatorio especificar el modo de conexión del
+                condensador</div>
+            </div>
+      </div>
+      <div class="col-xs-6 form-group">
+          <label>
+              Nombre Unidad:
+          </label>
+          <input type="text" formControlName="nombreUnd" class="form-control">
+      </div>
+      <div class="col-xs-6 form-group">
+          <label>
+              Capacidad Efectiva Neta:
+          </label>
+          <input type="text" formControlName="capEf" class="form-control">
+      </div>
+  </div>
+  <div class="row">
+      <div class="col-xs-6 form-group">
+          <label>
+              Mínimo Técnico:
+          </label>
+          <input type="text" formControlName="minTec" class="form-control">
+      </div>
+      <div class="col-xs-6 form-group">
+          <label>
+              Factor de Potencia Nominal:
+          </label>
+          <input type="text" formControlName="factPot" class="form-control">
+      </div>
+      <div class="col-xs-6 form-group">
+          <label>
+              Capacidad de Absorcion de Reactivos:
+          </label>
+          <input type="text" formControlName="capAbs" class="form-control">
+      </div>
+  </div>
+  <button class="btn btn-primary btn-block" (click)="thisSubmit()" >Submit</button>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+  </body>
+</html>
+</form>	
