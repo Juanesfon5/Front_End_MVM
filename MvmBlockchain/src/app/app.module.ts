@@ -15,7 +15,6 @@ import { MatButtonModule, MatNativeDateModule, MatIconModule, MatSidenavModule, 
 import { CreateAgentComponent } from './create-agent/create-agent.component';
 import { ViewAgentsComponent } from './view-agents/view-agents.component';
 import { CreateRegulatorComponent } from './create-regulator/create-regulator.component';
-import { MySidenavComponent } from './my-sidenav/my-sidenav.component';
 import { ViewRegulatorComponent } from './view-regulator/view-regulator.component';
 
 /**import { CreateRegulatorComponent } from './create-regulator/create-regulator.component';
