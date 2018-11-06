@@ -18,11 +18,14 @@ export class ApiService {
     return this.httpClient.post(`${this.endpoint}/authenticate`, user).subscribe(data => {
       if (data['success']) {
         this.storeUserData(data['user'], data['token']);
-        if (data['user.type'] == 'admin'){
+        let ss = JSON.parse(localStorage.getItem('user'));
+        console.log(ss);
+        console.log(ss.type);
+        if (ss.type == 'admin'){
           this.router.navigate(['Admin']);
-        } else if (data['user.type'] == 'regulator'){
+        } else if (ss.type == 'regulator'){
           this.router.navigate(['XMUSER']);
-        } else if (data['user.type'] == 'agent'){
+        } else if (ss.type == 'agent'){
           this.router.navigate(['Agente']);
         }
       } else {
